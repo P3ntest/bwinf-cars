@@ -13,7 +13,7 @@ public class MoveInstruction {
 
     public static void printInstructionList(List<MoveInstruction> list) {
         for (MoveInstruction instruction : list) {
-            System.out.print(instruction.car.key + " " + instruction.delta);
+            System.out.print(instruction.car.key.toUpperCase() + " " + instruction.delta + ", ");
         }
     }
 }
