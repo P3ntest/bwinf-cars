@@ -107,7 +107,7 @@ My initial Attempt was to loop through the cars twice for every spot, however I 
 
 ## Other classes and functions used but not yet explained
 ### `Car::effort():List<MoveInstruction[recursive]`
-This is arguably the most important function of this algorything, since It is and contains the recursion.
+This is arguably the most important function of this algorithm, since It is and contains the recursion.
 ```java
 public List<MoveInstruction> effort(int delta) throws CarBumpException {
     int target = position + delta;
