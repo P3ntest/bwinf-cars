@@ -222,6 +222,24 @@ This is a wrapper for a single recursive required action executed by a car. It c
 
 It has one *static* function in order to print a `List` of itself to `std::out`. This function is self explaining and not mission-critical so I will not be explaining it in the scope of this documentaion.
 
+## Example 
+I will explain an example input and output in the context of this challenge.
+
+Input:
+```txt
+A G
+2
+H 2
+I 5
+```
+
+This file will first be parsed into my OOP format. This results in `7` parking spots (A - G) and `2` blocking cars (H and I). 
+
+The program will now iterate through all the available spots and print instructions for the potential unblocking into `std::out`. It starts of py omitting the cards key and a `":"` without a line terminator. 
+
+At this point the recursion begins. The spot iterates through every blocking car to check if it is blocking the current spot. If none is found, nothing will be printed and we `continue` to the next one. On successful found of a blocking car, the recursive function will be called:
+
+The blocking car itself gets prompted to move according to a certain delta. This delta is calculated by the current spot's position and the blocking car's position. Now knowing how much it has to move, we again iterate through all *other* blocking cars and check if they are blocking us, in which case we will pursue the iterative algorithm further. If there is no other car, we will terminate the recursion and the instruction stack can be printed.
 ## Final Notes
 I chose this challenge because I figured it would be the easiest to complete. During my multiple attempts, I also helped out multiple fellow students and realised a lot of interesting things about this challenge that way. I would say I solved this as efficiently as possible and without any errors. However there is still room for improvement, i.e. you could write this in a more efficient programming language like *C* or implement special cases if one parking spot is impossible to solve.
 
