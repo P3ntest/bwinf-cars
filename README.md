@@ -87,7 +87,7 @@ My initial Attempt was to loop through the cars twice for every spot, however I 
     } catch (CarBumpException ignored) {
     }
     ```
-    We execute these lines in a `try {} catch() {}` since I have implemented a custom exception which can be thrown by the `Car::effort():List<MoveInstruction>` function - the `CarBumpException`. This wil be thrown whenever a certain direction (either left or right) is impossible to complete. This happens when a car *"bumps"* into a wall while trying to make space. If this happens, the corresponding list will be kept at `null` respectively. After this step, we just have to compare the two.
+    We execute these lines in a `try {} catch() {}` since I have implemented a custom exception which can be thrown by the `Car::effort():List<MoveInstruction>` function - the `CarBumpException`. This will be thrown whenever a certain direction (either left or right) is impossible to complete. This happens when a car *"bumps"* into a wall while trying to make space. If this happens, the corresponding list will be kept at `null` respectively. After this step, we just have to compare the two.
     ```java
     if (effortRight != null && effortLeft != null) {
         if (effortRight.size() > effortLeft.size()) {
