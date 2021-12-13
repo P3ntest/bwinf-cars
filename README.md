@@ -3,7 +3,7 @@
 ---
 
 ## The Challenge
-The chellenge is to determine which cars need to move and how far, so that each spot is free. The difficulty here is, that cars can be blocking each other.
+The challenge is to determine which cars need to move and how far, so that each spot is free. The difficulty here is, that cars can be blocking each other.
 
 ### My solution structure
 I solved this problem using Java 16.0.0 running on Amazon Corretto 16. I used OOP. My preferred editor of choice for this was IntelliJ IDEA Community Edition 2019.x.x. The current solution works for all test samples plus addition 10 I created to test it further. The program omits all of its solutions to `std::out` at runtime.
@@ -64,7 +64,7 @@ My initial Attempt was to loop through the cars twice for every spot, however I 
         }
     }
     ``` 
-    If there is none, we end the line and `continue` to the nextone.
+    If there is none, we end the line and `continue` to the next one.
     ```java
     if (blockingCar == null) {
         System.out.println();
